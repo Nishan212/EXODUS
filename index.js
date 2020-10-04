@@ -19,12 +19,12 @@ function filterEvent(e) {
 var buttons = document.getElementsByClassName("book");
 Array.from(buttons).forEach((button) => {
   if (button.id != "checkin") {
-    button.firstElementChild.addEventListener("click", clickEvent);
+    button.addEventListener("click", clickEvent);
   }
 });
 
 function clickEvent(e) {
-  var id = e.target.parentElement.id;
+  var id = e.target.id;
   var guests = document.getElementById("guest" + id[4]).value;
   var days = document.getElementById("day" + id[4]).firstElementChild.value;
   var price = document
