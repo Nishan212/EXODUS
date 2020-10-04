@@ -19,16 +19,16 @@ function filterEvent(e) {
 var buttons = document.getElementsByClassName("book");
 Array.from(buttons).forEach((button) => {
   if (button.id != "checkin") {
-    button.addEventListener("click", clickEvent);
+    button.firstElementChild.addEventListener("click", clickEvent);
   }
 });
 
 function clickEvent(e) {
-  var guests = document.getElementById("guest" + e.target.id[4]).value;
-  var days = document.getElementById("day" + e.target.id[4]).firstElementChild
-    .value;
+  var id = e.target.parentElement.id;
+  var guests = document.getElementById("guest" + id[4]).value;
+  var days = document.getElementById("day" + id[4]).firstElementChild.value;
   var price = document
-    .getElementById("price" + e.target.id[4])
+    .getElementById("price" + id[4])
     .textContent.split("₹")[1];
 
   days = days == "" ? "--" : days;

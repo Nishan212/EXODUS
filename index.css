@@ -74,6 +74,10 @@ button:active {
   overflow: auto;
 }
 
+.card a {
+  padding: 10px 20%;
+}
+
 .card-header {
   min-height: 250px;
   background-repeat: no-repeat;
