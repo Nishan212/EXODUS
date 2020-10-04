@@ -23,6 +23,8 @@ var buttons = document.getElementsByClassName("book");
 Array.from(buttons).forEach((button) => {
   if (button.id != "checkin") {
     button.addEventListener("click", clickEvent);
+  } else {
+    button.addEventListener("click", alertEvent);
   }
 });
 
@@ -40,4 +42,16 @@ function clickEvent(e) {
   document.getElementById("receipt-guests").textContent = guests;
   document.getElementById("receipt-days").textContent = days;
   document.getElementById("receipt-total").textContent = totalCost;
+}
+
+function alertEvent(e) {
+  var guests = document.getElementById("receipt-guests").textContent;
+  var days = document.getElementById("receipt-days").textContent;
+  if (guests != "--" || days != "--") {
+    alert(
+      `Your room for ${guests} halt for ${days} day/days is getting ready...`
+    );
+  } else {
+    alert("Please select the room...");
+  }
 }
