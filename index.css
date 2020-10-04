@@ -32,7 +32,8 @@ header li {
 }
 
 header input {
-  padding: 10px;
+  padding: 5px;
+  margin: 0;
   width: 50%;
   max-width: 400px;
   background-color: #181818;
@@ -163,7 +164,7 @@ select:focus {
 }
 
 #top {
-  background-image: url("/images/space.jfif");
+  background-image: url("images/space.jfif");
   background-repeat: no-repeat;
   background-position: center right;
   background-size: cover;
@@ -171,7 +172,7 @@ select:focus {
 
 #tagline {
   font-size: 28px;
-  background-image: url("/images/tagline.jpg");
+  background-image: url("images/tagline.jpg");
   background-position: top right;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -201,27 +202,27 @@ select:focus {
 }
 
 #single {
-  background-image: url("/images/Single_room.jpeg");
+  background-image: url("images/Single_room.jpeg");
 }
 
 #double {
-  background-image: url("/images/Double_bedroom.jpg");
+  background-image: url("images/Double_bedroom.jpg");
 }
 
 #twin {
-  background-image: url("/images/twin_bedroom.jpg");
+  background-image: url("images/twin_bedroom.jpg");
 }
 
 #king {
-  background-image: url("/images/king.jpg");
+  background-image: url("images/king.jpg");
 }
 
 #minisuite {
-  background-image: url("/images/mini_suite.jpg");
+  background-image: url("images/mini_suite.jpg");
 }
 
 #suite {
-  background-image: url("/images/Suite.jpg");
+  background-image: url("images/Suite.jpg");
 }
 
 #bottom {
@@ -241,7 +242,8 @@ select:focus {
 }
 
 #receipt-header {
-  background-image: url("images/billing.png");
+  min-height: 400px;
+  background-image: url("images/receipt.jpeg");
 }
 
 @media (max-width: 1000px) {
@@ -260,5 +262,13 @@ select:focus {
 
   .card-header {
     min-height: 150px;
+  }
+
+  #tagline {
+    font-size: 25px;
+  }
+
+  #receipt-header {
+    min-height: 200px;
   }
 }

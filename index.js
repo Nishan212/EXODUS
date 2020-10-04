@@ -8,7 +8,10 @@ function filterEvent(e) {
 
   Array.from(items).forEach((item) => {
     var roomName = item.firstElementChild.textContent;
-    if (roomName.toLowerCase().indexOf(text) != -1) {
+    if (
+      roomName.toLowerCase().indexOf(text) != -1 ||
+      roomName.toLowerCase() == "receipt"
+    ) {
       item.parentElement.style.display = "block";
     } else {
       item.parentElement.style.display = "none";
